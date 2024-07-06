@@ -9,13 +9,11 @@ export const App = () => {
     }
     students.push(student)
   }
+  const [show, setShow] = useState(true)
   const [data, setData] = useState(students)
-  const deleteData = (id) => {
-    setData(data.filter((item) => item.id != id))
-  }
-  return (
-    <div>
-      <table className="table table-hover">
+  const deleteData = (id) => setData(data.filter((item) => item.id != id))
+  const table = () => (
+    <table className="table table-hover">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -35,6 +33,11 @@ export const App = () => {
           ))}
         </tbody>
       </table>
+  )
+  return (
+    <div>
+      {show && table()}
+      <button className="btn btn-primary" onClick={()=>setShow(!show)}>{show ? "Hidden" : "Show"}</button>
     </div>
   );
 }

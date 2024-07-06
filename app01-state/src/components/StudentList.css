@@ -1,0 +1,9 @@
+main {
+    background-color: darkgray;
+    padding: 20px;
+}
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}

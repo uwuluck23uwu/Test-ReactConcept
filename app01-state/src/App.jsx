@@ -13,10 +13,12 @@ function App() {
   }
   return (
     <div>
-      {number}
-      <button onClick={Add}>Add</button>
-      <button onClick={Minus}>Minus</button>
-      <button onClick={Reset}>Reset</button>
+      <div className="d-flex justify-content-center">{number}</div>
+      <div className="d-flex justify-content-around">
+        <button className="btn btn-primary" onClick={Add}>Add</button>
+        <button className="btn btn-primary" onClick={Minus}>Minus</button>
+        <button className="btn btn-primary" onClick={Reset}>Reset</button>
+      </div>
     </div>
   )
 }

@@ -14,7 +14,7 @@ function App() {
   }
   const [data, setData] = useState(students)
   const addData = (newStudent) => {
-    setData([data, newStudent])
+    setData([...data, newStudent])
   }
   const deleteData = (id) => setData(data.filter((item) => item.id != id))
   return (

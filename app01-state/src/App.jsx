@@ -5,10 +5,13 @@ import AddForm from './components/AddForm'
 
 function App() {
   let students = []
+  const gen = ["Male", "Female"]
   for (let index = 1; index <= 5; index++) {
+    const number = Math.floor(Math.random()*2)
       let student = {
         id : index,
-        name : "Coffee" + index
+        name : "Student" + index,
+        gender : gen[number]
       }
       students.push(student)
   }

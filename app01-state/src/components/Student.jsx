@@ -5,17 +5,19 @@ function Student(data, deleteData) {
     <div>
         <table className="table table-hover">
             <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Action</th>
-            </tr>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Action</th>
+                </tr>
             </thead>
             <tbody>
             {data.map((item) => (
                 <tr key={item.id}>
                     <th scope="row">{item.id}</th>
                     <td>{item.name}</td>
+                    <td>{item.gender}</td>
                     <td>
                         <button className="btn btn-danger" onClick={()=>deleteData(item.id)}>Delete</button>
                     </td>

@@ -9,8 +9,8 @@ function StudentList({data, deleteData}) {
             <div className='summary'>
                 <p style={{ backgroundColor: "cyan", fontStyle: "italic" }}>All Student : {data.length}</p>
                 <button className="btn btn-primary" onClick={()=>setShow(!show)}>{show ? "Hidden" : "Show"}</button>
-                {show && Student(data, deleteData)}
-            </div>
+            </div> 
+            {show && Student(data, deleteData)}
         </main>
     );
 }

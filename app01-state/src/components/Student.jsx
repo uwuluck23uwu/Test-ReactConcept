@@ -14,11 +14,11 @@ function Student(data, deleteData) {
             <tbody>
             {data.map((item) => (
                 <tr key={item.id}>
-                <th scope="row">{item.id}</th>
-                <td>{item.name}</td>
-                <td>
-                    <button className="btn btn-danger" onClick={()=>deleteData(item.id)}>Delete</button>
-                </td>
+                    <th scope="row">{item.id}</th>
+                    <td>{item.name}</td>
+                    <td>
+                        <button className="btn btn-danger" onClick={()=>deleteData(item.id)}>Delete</button>
+                    </td>
                 </tr>
             ))}
             </tbody>

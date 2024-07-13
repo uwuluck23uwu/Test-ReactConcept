@@ -1,30 +1,31 @@
 import React, {useState, useEffect, useCallback} from 'react'
 import './ProductList.css'
+import { useFetch } from '../hooks/useFerch';
 
 function ProductList() {
-    const [Products, setProsduct] = useState();
-    const [Count, setCount] = useState();
     const [Url, setUrl] = useState("");
-    const fetchUrl = useCallback(() => {
-        fetch(Url)
-        .then((response)=>response.json())
-        .then((data)=>{
-                setProsduct(data)
-                setCount(data.length)
-            })
-        .catch((e)=>console.log("Failed"));
-    }, [Url])
-
-    useEffect(()=>{
-        fetchUrl()
-        console.log(55555)
-    }, [fetchUrl]);
+    const {data : Products} = useFetch(Url);
+    
+    // const [Products, setProsduct] = useState();
+    // const fetchUrl = useCallback(() => {
+    //     fetch(Url)
+    //     .then((response)=>response.json())
+    //     .then((data)=>{
+    //             setProsduct(data)
+    //             setCount(data.length)
+    //         })
+    //     .catch((e)=>console.log("Failed"));
+    // }, [Url])
+    // useEffect(()=>{
+    //     fetchUrl()
+    //     console.log(55555)
+    // }, [fetchUrl]);
   
     return (
       <div className="product-list">
         <h1 className="product-list-title">Product List</h1>
         <div className="product-row">
-            <h2>{Count}</h2>
+            <h2>{Products && Products.length}</h2>
             <button onClick={()=>setUrl("http://localhost:3000/products/")}>Load All</button>
             <button onClick={()=>setUrl("http://localhost:3000/products?in_stock=true")}>Load In Stock</button>
         </div>

@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useCallback} from 'react'
 import './ProductList.css'
 
 function ProductList() {
     const [Products, setProsduct] = useState();
     const [Count, setCount] = useState();
     const [Url, setUrl] = useState("");
-    const fetchUrl = ()=>{
+    const fetchUrl = useCallback(() => {
         fetch(Url)
         .then((response)=>response.json())
         .then((data)=>{
@@ -13,12 +13,12 @@ function ProductList() {
                 setCount(data.length)
             })
         .catch((e)=>console.log("Failed"));
-    }
+    }, [Url])
 
     useEffect(()=>{
         fetchUrl()
         console.log(55555)
-    }, [Url]);
+    }, [fetchUrl]);
   
     return (
       <div className="product-list">

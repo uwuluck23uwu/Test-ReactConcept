@@ -5,17 +5,20 @@ function ProductList() {
     const [Products, setProsduct] = useState();
     const [Count, setCount] = useState();
     const [Url, setUrl] = useState("");
+    const fetchUrl = ()=>{
+        fetch(Url)
+        .then((response)=>response.json())
+        .then((data)=>{
+                setProsduct(data)
+                setCount(data.length)
+            })
+        .catch((e)=>console.log("Failed"));
+    }
 
     useEffect(()=>{
-      fetch(Url)
-      .then((response)=>response.json())
-      .then((data)=>{
-            setProsduct(data)
-            setCount(data.length)
-        })
-      .catch((e)=>console.log("Failed"));
+        fetchUrl()
+        console.log(55555)
     }, [Url]);
-    
   
     return (
       <div className="product-list">

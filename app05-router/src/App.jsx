@@ -5,6 +5,7 @@ import { Home, Footer, Header, ProductList, ProductDetail, Contact } from './com
 function App() {
   return (
     <div>
+      <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="products" element={<ProductList/>}/>

@@ -1,6 +1,6 @@
 import { createContext,useContext, useReducer} from "react"
+import { cartReducer } from "../reducer/cartReducer"
 import  products  from "../data/product"
-import { cartReducer } from "../reducer/cartReducer";
 
 const CartContext = createContext();
 
@@ -11,10 +11,14 @@ const initState = {
 }
 
 export const CartProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(cartReducer, initState);
+  const [state, dispatch] = useReducer(cartReducer, initState);
+
+  function formatMoney(money){
+    return money.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  }
 
     return (
-      <CartContext.Provider value={{ ...state }}>
+      <CartContext.Provider value={{ ...state, formatMoney }}>
         {children} {/* คอมโพเนนต์ที่จะทำ value ไปใช้งาน */}
       </CartContext.Provider>
     );

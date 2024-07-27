@@ -16,14 +16,17 @@ export const CartProvider = ({ children }) => {
   function formatMoney(money){
     return money.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
   }
+  function removeItem(id) {
+    dispatch({ type: "REMOVE", payload: id });
+  }
 
   useEffect(()=>{
     console.log("คำนวณหาผลรวม")
     dispatch({type:"CALCULATE_TOTAL"})
   },[state.products])
-  
+
   return (
-    <CartContext.Provider value={{ ...state, formatMoney }}>
+    <CartContext.Provider value={{ ...state, formatMoney, removeItem }}>
       {children} {/* คอมโพเนนต์ที่จะทำ value ไปใช้งาน */}
     </CartContext.Provider>
   );

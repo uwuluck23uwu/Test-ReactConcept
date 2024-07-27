@@ -12,12 +12,17 @@ export const cartReducer = (state,action) => {
             total: 0,
             amount: 0,
           }
-        );
-
+        );      
         return {
             ...state,
             total,
             amount,
         };
     }
+    if(action.type==="REMOVE"){
+        return{
+          ...state,
+          products:state.products.filter((item)=>item.id !==action.payload)
+        }
+    }   
 }

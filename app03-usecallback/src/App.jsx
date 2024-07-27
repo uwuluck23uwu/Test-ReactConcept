@@ -14,7 +14,7 @@ const App = () => {
   const [data, setData] = useState("1.App - ");
   const returnComment = useCallback((name) => {
     return data + name;
-  }, [data]);ด
+  }, [data]);
   return (
     <div className="App">
       <Child returnComment={returnComment} />

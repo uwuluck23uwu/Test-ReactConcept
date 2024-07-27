@@ -1,4 +1,4 @@
-import { createContext,useContext, useReducer} from "react"
+import { createContext,useContext, useReducer, useEffect } from "react"
 import { cartReducer } from "../reducer/cartReducer"
 import  products  from "../data/product"
 
@@ -17,12 +17,17 @@ export const CartProvider = ({ children }) => {
     return money.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
   }
 
-    return (
-      <CartContext.Provider value={{ ...state, formatMoney }}>
-        {children} {/* คอมโพเนนต์ที่จะทำ value ไปใช้งาน */}
-      </CartContext.Provider>
-    );
-  };
+  useEffect(()=>{
+    console.log("คำนวณหาผลรวม")
+    dispatch({type:"CALCULATE_TOTAL"})
+  },[state.products])
+  
+  return (
+    <CartContext.Provider value={{ ...state, formatMoney }}>
+      {children} {/* คอมโพเนนต์ที่จะทำ value ไปใช้งาน */}
+    </CartContext.Provider>
+  );
+};
   
 export const useCart = () => {
     return useContext(CartContext);

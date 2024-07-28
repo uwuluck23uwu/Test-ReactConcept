@@ -10,7 +10,7 @@ export const AddDestination = () => {
     e.preventDefault();
     
     addDestinationMutation({
-      id: Math.random() * 100,
+      id: (Math.random() * 100).toString(),
       city: newCity,
       country: newCountry,
       daysNeeded: parseInt(Math.random() * 10) + 1,

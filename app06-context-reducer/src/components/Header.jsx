@@ -5,7 +5,7 @@ export const Header = () => {
   const { amount } = useCart();
 
   return (
-    <header>
+    <header className="header">
       <p>Shopping Application</p>
       <p>สินค้าในตะกร้า : {amount}</p>
     </header>

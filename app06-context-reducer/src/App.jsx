@@ -1,10 +1,10 @@
-import { Header } from "./components/Header";
-import SRoute from "./components/SRoute"; // Default import
+import MuiHeader from "./components/MuiHeader"
+import SRoute from "./components/SRoute";
 
 export default function App() {
   return (
     <div className="pApp">
-      <Header />
+      <MuiHeader />
       <SRoute />
     </div>
   );

@@ -1,7 +1,8 @@
-import { useCart } from "../context/CartContext"
-import { Item } from "./Item"
+import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
+import { Item } from "./Item";
 
-export const Cart = () => {
+const Cart = () => {
   const { products, total, amount, formatMoney } = useCart();
 
   return (
@@ -10,6 +11,9 @@ export const Cart = () => {
         {products.length > 0
           ? `ยอดชำระเงินรวม : ${formatMoney(total)} บาท`
           : "ไม่มีสินค้าในตะกร้า"}
+        <Link to="ProductCreate">
+          <button>+</button>
+        </Link>
       </h1>
 
       {products.map((data) => {
@@ -18,3 +22,5 @@ export const Cart = () => {
     </div>
   );
 };
+
+export default Cart; // Export default

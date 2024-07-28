@@ -1,11 +1,11 @@
 import { Header } from "./components/Header";
-import { Cart } from "./components/Cart";
+import SRoute from "./components/SRoute"; // Default import
 
 export default function App() {
   return (
     <div className="pApp">
       <Header />
-      <Cart />
+      <SRoute />
     </div>
   );
 }

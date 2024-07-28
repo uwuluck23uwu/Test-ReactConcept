@@ -1,11 +1,10 @@
 import React from "react";
 import { useGetAllDestinationQuery } from "../api/destinationApi";
-import { useDeleteDestinationMutation } from "../api/destinationApi";
 import { Destination } from "./Destination";
 
 export const DestinationList = () => {
-  const { data, isLoading, isSuccess, isError, error } = useGetAllDestinationQuery();
-  const [deleteDestination] = useDeleteDestinationMutation();
+  const { data, isLoading, isSuccess, isError, error } =
+    useGetAllDestinationQuery();
 
   let content;
   if (isLoading) {

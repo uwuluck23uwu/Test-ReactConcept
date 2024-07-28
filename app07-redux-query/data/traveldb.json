@@ -19,12 +19,6 @@
       "daysNeeded": 1
     },
     {
-      "id": "81.62800885945522",
-      "city": "",
-      "country": "",
-      "daysNeeded": 2
-    },
-    {
       "id": "78.82839983116243",
       "city": "",
       "country": "",
@@ -83,12 +77,6 @@
       "city": "",
       "country": "",
       "daysNeeded": 9
-    },
-    {
-      "id": "84.6778318947492",
-      "city": "",
-      "country": "",
-      "daysNeeded": 2
     },
     {
       "id": "70.1400471246827",
@@ -265,12 +253,6 @@
       "daysNeeded": 3
     },
     {
-      "id": "87.93551115076342",
-      "city": "",
-      "country": "",
-      "daysNeeded": 6
-    },
-    {
       "id": "54.79635958188504",
       "city": "",
       "country": "",
@@ -349,12 +331,6 @@
       "daysNeeded": 7
     },
     {
-      "id": "82.84205162989477",
-      "city": "",
-      "country": "",
-      "daysNeeded": 7
-    },
-    {
       "id": "25.07768094444982",
       "city": "",
       "country": "",
@@ -371,12 +347,6 @@
       "city": "",
       "country": "",
       "daysNeeded": 8
-    },
-    {
-      "id": "88.14147714548895",
-      "city": "",
-      "country": "",
-      "daysNeeded": 9
     },
     {
       "id": "30.584693057845193",
@@ -535,12 +505,6 @@
       "daysNeeded": 5
     },
     {
-      "id": "82.8621422695083",
-      "city": "",
-      "country": "",
-      "daysNeeded": 4
-    },
-    {
       "id": "80.16127567343676",
       "city": "",
       "country": "",
@@ -557,12 +521,6 @@
       "city": "",
       "country": "",
       "daysNeeded": 10
-    },
-    {
-      "id": "86.7738881548",
-      "city": "",
-      "country": "",
-      "daysNeeded": 9
     },
     {
       "id": "55.870809411220776",
@@ -605,12 +563,6 @@
       "city": "",
       "country": "",
       "daysNeeded": 7
-    },
-    {
-      "id": "87.56593423534382",
-      "city": "",
-      "country": "",
-      "daysNeeded": 3
     },
     {
       "id": "28.969108878484207",
@@ -665,12 +617,6 @@
       "city": "",
       "country": "",
       "daysNeeded": 6
-    },
-    {
-      "id": "84.22767099438624",
-      "city": "",
-      "country": "",
-      "daysNeeded": 8
     },
     {
       "id": "44.545331015767786",
@@ -821,12 +767,6 @@
       "city": "",
       "country": "",
       "daysNeeded": 1
-    },
-    {
-      "id": "82.16927686492039",
-      "city": "",
-      "country": "",
-      "daysNeeded": 9
     },
     {
       "id": "38.91522749175014",
@@ -1027,22 +967,10 @@
       "daysNeeded": 10
     },
     {
-      "id": "83.9858897663504",
-      "city": "",
-      "country": "",
-      "daysNeeded": 3
-    },
-    {
       "id": "30.237067988638742",
       "city": "",
       "country": "",
       "daysNeeded": 2
-    },
-    {
-      "id": "87.4375555393975",
-      "city": "",
-      "country": "",
-      "daysNeeded": 7
     },
     {
       "id": "75.8195752410297",
@@ -1075,22 +1003,10 @@
       "daysNeeded": 1
     },
     {
-      "id": "85.42199681312744",
-      "city": "",
-      "country": "",
-      "daysNeeded": 8
-    },
-    {
       "id": "23.910460242152865",
       "city": "",
       "country": "",
       "daysNeeded": 6
-    },
-    {
-      "id": "87.69085398734224",
-      "city": "",
-      "country": "",
-      "daysNeeded": 9
     },
     {
       "id": "40.68632909967669",
@@ -1121,12 +1037,6 @@
       "city": "",
       "country": "",
       "daysNeeded": 6
-    },
-    {
-      "id": "86.09065777247122",
-      "city": "",
-      "country": "",
-      "daysNeeded": 2
     },
     {
       "id": "16.933450994378752",
@@ -1232,8 +1142,8 @@
     },
     {
       "id": "81.54723382975367",
-      "city": "",
-      "country": "",
+      "city": "sG",
+      "country": "SWRH",
       "daysNeeded": 9
     },
     {
@@ -1367,12 +1277,6 @@
       "city": "",
       "country": "",
       "daysNeeded": 9
-    },
-    {
-      "id": "85.40254196263241",
-      "city": "",
-      "country": "",
-      "daysNeeded": 5
     },
     {
       "id": "2.6409978414972946",

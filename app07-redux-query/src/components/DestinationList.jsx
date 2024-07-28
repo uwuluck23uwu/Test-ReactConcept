@@ -1,10 +1,10 @@
 import React from "react";
 import { useGetAllDestinationQuery } from "../api/destinationApi";
 import { useDeleteDestinationMutation } from "../api/destinationApi";
+import { Destination } from "./Destination";
 
 export const DestinationList = () => {
-  const { data, isLoading, isSuccess, isError, error } =
-    useGetAllDestinationQuery();
+  const { data, isLoading, isSuccess, isError, error } = useGetAllDestinationQuery();
   const [deleteDestination] = useDeleteDestinationMutation();
 
   let content;
@@ -12,32 +12,7 @@ export const DestinationList = () => {
     content = <p>Loading...</p>;
   } else if (isSuccess) {
     content = data.map((destination) => {
-      return (
-        <div
-          className="row py-1"
-          key={destination.id}
-          style={{
-            borderBottom: "1px solid #333",
-            borderTop: "1px solid #333",
-          }}
-        >
-          <div className="col-3 offset-3">
-            {destination.city}, {destination.country}
-          </div>
-
-          <div className="col-1 text-warning">
-            {destination.daysNeeded} days
-          </div>
-          <div className="col-2">
-            <button
-              className="btn form-control btn-danger"
-              onClick={() => deleteDestination({ id: destination.id })}
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      );
+      return <Destination destination={destination} key={destination.id} />;
     });
   } else if (isError) {
     content = <p>{error}</p>;

@@ -9,14 +9,16 @@ const Cart = () => {
   return (
     <div>
       <Header />
-      <h1 style={{ textAlign: "center" }}>
-        {products.length > 0
-          ? `ยอดชำระเงินรวม : ${formatMoney(total)} บาท`
-          : "ไม่มีสินค้าในตะกร้า"}
-        <Link to="ProductCreate">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 0' }}>
+        <h1 style={{ flex: 1, textAlign: 'center', marginRight: '-100px'}}>
+          {products.length > 0
+            ? `ยอดชำระเงินรวม : ${formatMoney(total)} บาท`
+            : "ไม่มีสินค้าในตะกร้า"}
+        </h1>
+        <Link to="ProductCreate" style={{ marginRight: '100px' }}>
           <button>+</button>
         </Link>
-      </h1>
+      </div>
 
       {products.map((data) => {
         return <Item key={data.id} {...data} />;
@@ -25,4 +27,4 @@ const Cart = () => {
   );
 };
 
-export default Cart; // Export default
+export default Cart;

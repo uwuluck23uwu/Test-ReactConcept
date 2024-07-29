@@ -40,6 +40,12 @@ export const cartReducer = (state,action) => {
             products: updateProduct,
         };
     }    
+    if (action.type === "ADD_PRODUCT") {
+        return{
+            ...state,
+            products:[...state.products, action.payload],
+          }
+    }
     if (action.type === "SUBTRACT") {
         let updateProduct = state.products.map((item) => {
             if (item.id === action.payload) {

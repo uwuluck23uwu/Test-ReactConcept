@@ -1,4 +1,4 @@
-import Cart from "./Cart"; // Import default
+import Cart from "./Cart";
 import ProductCreate from "./ProductCreate";
 import NotFound from "./NotFound";
 

@@ -13,8 +13,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import AddIcon from '@mui/icons-material/Add';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Drawer from '@mui/material/Drawer';
@@ -78,8 +76,8 @@ export default function MuiHeader({ onDrawer }) {
           <ListItem key={text} disablePadding>
             <ListItemButton component={NavLink} to={text === 'Product' ? "/" : "/ProductCreate"}>
               <ListItemIcon>
-                {text === 'Product' && <ShoppingCartIcon />}
-                {text === 'ProductCreate' && <AddIcon />}
+                {text === 'Product'}
+                {text === 'ProductCreate'}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -189,7 +187,7 @@ export default function MuiHeader({ onDrawer }) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: 'red' }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -223,7 +221,7 @@ export default function MuiHeader({ onDrawer }) {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={4} color="secondary">
                 <MailIcon />
               </Badge>
             </IconButton>
@@ -232,7 +230,7 @@ export default function MuiHeader({ onDrawer }) {
               aria-label="show 17 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={17} color="error">
+              <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>

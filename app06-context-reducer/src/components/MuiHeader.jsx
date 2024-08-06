@@ -23,6 +23,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { NavLink } from "react-router-dom";
+import HomeIcon from '@mui/icons-material/Home';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -76,8 +78,7 @@ export default function MuiHeader({ onDrawer }) {
           <ListItem key={text} disablePadding>
             <ListItemButton component={NavLink} to={text === 'Product' ? "/" : "/ProductCreate"}>
               <ListItemIcon>
-                {text === 'Product'}
-                {text === 'ProductCreate'}
+                {text === 'Product' ? <HomeIcon /> : <AddCircleIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -195,12 +196,13 @@ export default function MuiHeader({ onDrawer }) {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            onClick={toggleDrawer(true)}
           >
-            <MenuIcon onClick={toggleDrawer(true)} />
-            <Drawer open={open} onClose={toggleDrawer(false)}>
-              {DrawerList}
-            </Drawer>
+            <MenuIcon />
           </IconButton>
+          <Drawer open={open} onClose={toggleDrawer(false)}>
+            {DrawerList}
+          </Drawer>
           <Typography
             variant="h6"
             noWrap

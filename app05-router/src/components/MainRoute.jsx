@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom'
 import { Home, Footer, Header, ProductList, ProductDetail, Contact, Notfound, ContactIn, ContactEu, ContactUs } from './index'
 
 const MainRoute = ({ div style={{
-  marginLeft: drawerOpen ? 250 : 0,
-  transition: 'margin 0.3s',
-}}> }) => {
+    marginLeft: drawerOpen ? 250 : 0,
+    transition: 'margin 0.3s',
+  }}> }) => {
   return (
     <div style={{
       marginLeft: drawerOpen ? 250 : 0,

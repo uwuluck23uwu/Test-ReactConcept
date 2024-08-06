@@ -16,7 +16,7 @@ export const useProducts = () => {
 
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initState);
-  
+
   function formatMoney(money) {
     return money.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
   }
@@ -34,7 +34,6 @@ export const CartProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    console.log("คำนวณหาผลรวม");
     dispatch({ type: "CALCULATE_TOTAL" });
   }, [state.products]);
 
@@ -49,7 +48,7 @@ export const CartProvider = ({ children }) => {
         addProduct,
       }}
     >
-      {children} {/* คอมโพเนนต์ที่จะทำ value ไปใช้งาน */}
+      {children}
     </CartContext.Provider>
   );
 };

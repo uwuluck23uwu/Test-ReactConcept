@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "image": "https://image.uniqlo.com/UQ/ST3/th/imagesgoods/455359/item/thgoods_09_455359.jpg?width=320",
+      "name": "เสื้อยืด U AIRism คอตตอนคอกลม แขน 1/2 ทรงหลวม",
+      "price": 490,
+      "size": "XXL",
+      "promotion": "โปรโมชั่นพิเศษ ตั้งแต่ 26 Jul 2024 - 01 Aug 2024",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "image": "https://image.uniqlo.com/UQ/ST3/th/imagesgoods/457517/item/thgoods_07_457517.jpg?width=320",
+      "name": "เสื้อยืด AIRism คอตตอนแขนกุด",
+      "price": 390,
+      "size": "3XL",
+      "promotion": "โปรโมชั่นพิเศษ ตั้งแต่ 26 Jul 2024 - 01 Aug 2024"
+    },
+    {
+      "id": "4",
+      "image": "https://image.uniqlo.com/UQ/ST3/th/imagesgoods/461914/item/thgoods_31_461914.jpg?width=320",
+      "name": "เสื้อยืด U AIRism คอตตอนคอกลม แขน 1/2 ทรงหลวม ลายทาง",
+      "price": 490,
+      "size": "3XL",
+      "promotion": "โปรโมชั่นพิเศษ ตั้งแต่ 26 Jul 2024 - 01 Aug 2024"
+    }
+  ],
+  "carts": []
+}
